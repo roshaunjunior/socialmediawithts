@@ -26,8 +26,8 @@ export const Form = () => {
    
    const navigate = useNavigate() ;
    
-   const onCreateForm = (data:createDataForm) => {
-       addDoc(postsRef, {
+   const onCreateForm = async (data:createDataForm) => {
+       await addDoc(postsRef, {
         title: data.title,
         description: data.description,
         username: user?.displayName,
